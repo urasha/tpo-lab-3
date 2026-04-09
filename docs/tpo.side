@@ -1,0 +1,998 @@
+{
+  "id": "37d3dfdb-6afc-4ece-9fa4-5f95a1c2f85a",
+  "version": "2.0",
+  "name": "tpo",
+  "url": "https://kinozal.tv",
+  "tests": [{
+    "id": "d8fc4f04-59cd-449d-8be4-e2421e5e8d56",
+    "name": "UC-01",
+    "commands": [{
+      "id": "ff671c9a-327d-41c0-841b-7f4a6e4f0aa2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8155f24-ad6a-4edb-96ab-d1d2adbab895",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x830",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b04bb37-2ab3-434d-9a25-e40de5e3a0c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=s",
+      "targets": [
+        ["id=s", "id"],
+        ["name=s", "name"],
+        ["css=#s", "css:finder"],
+        ["xpath=//input[@id='s']", "xpath:attributes"],
+        ["xpath=//form[@id='srchform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d48836a-d0fb-48c7-88f2-898ef483d364",
+      "comment": "",
+      "command": "type",
+      "target": "id=s",
+      "targets": [
+        ["id=s", "id"],
+        ["name=s", "name"],
+        ["css=#s", "css:finder"],
+        ["xpath=//input[@id='s']", "xpath:attributes"],
+        ["xpath=//form[@id='srchform']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "класс"
+    }, {
+      "id": "3e6f4076-1eac-40fd-9875-983ed413184d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s_submit",
+      "targets": [
+        ["css=.s_submit", "css:finder"],
+        ["xpath=//input[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='srchform']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90fa1189-f2c6-4239-b2a3-2a7e4b63e104",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.pad0x0x5x0 > a",
+      "targets": [
+        ["css=.pad0x0x5x0 > a", "css:finder"],
+        ["xpath=//div[@id='main']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pay.php')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af9a774d-5ab1-478d-aab0-e5387ddfe63c",
+      "comment": "",
+      "command": "click",
+      "target": "name=w",
+      "targets": [
+        ["name=w", "name"],
+        ["css=td:nth-child(4) .w100", "css:finder"],
+        ["xpath=//select[@name='w']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/form/div/table/tbody/tr[4]/td[4]/span/select", "xpath:idRelative"],
+        ["xpath=//td[4]/span/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "927c891c-8227-410b-ab2a-c77d2ceb8db0",
+      "comment": "",
+      "command": "select",
+      "target": "name=w",
+      "targets": [],
+      "value": "label=золото"
+    }, {
+      "id": "f9beeb96-faf3-4100-88ef-823971aa51ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w100 > option:nth-child(12)",
+      "targets": [
+        ["css=.w100 > option:nth-child(12)", "css:finder"],
+        ["xpath=(//option[@value='11'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/form/div/table/tbody/tr[4]/td[4]/span/select/option[12]", "xpath:idRelative"],
+        ["xpath=//td[4]/span/select/option[12]", "xpath:position"],
+        ["xpath=//option[contains(.,'золото')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0851970-e1f6-47d9-a387-30dd141ca022",
+      "comment": "",
+      "command": "click",
+      "target": "name=d",
+      "targets": [
+        ["name=d", "name"],
+        ["css=.sw90 > .w90", "css:finder"],
+        ["xpath=//select[@name='d']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/form/div/table/tbody/tr[4]/td[3]/span/select", "xpath:idRelative"],
+        ["xpath=//td[3]/span/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c76f40bc-4ce3-4268-ba45-5acfc18e8848",
+      "comment": "",
+      "command": "select",
+      "target": "name=d",
+      "targets": [],
+      "value": "label=2025"
+    }, {
+      "id": "ac2d7a0b-6ff6-46b3-8c50-3a5a435e70b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.w90 > option:nth-child(3)",
+      "targets": [
+        ["css=.w90 > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='2025']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/form/div/table/tbody/tr[4]/td[3]/span/select/option[3]", "xpath:idRelative"],
+        ["xpath=//td[3]/span/select/option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'2025')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68409134-46da-4013-aabc-aef243505342",
+      "comment": "",
+      "command": "click",
+      "target": "name=f",
+      "targets": [
+        ["name=f", "name"],
+        ["css=.sw70:nth-child(2) > .styled", "css:finder"],
+        ["xpath=//select[@name='f']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/form/div/table/tbody/tr[4]/td[5]/span[2]/select", "xpath:idRelative"],
+        ["xpath=//span[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d16f78d-dcc3-4d3e-a04a-4773805ce486",
+      "comment": "",
+      "command": "select",
+      "target": "name=f",
+      "targets": [],
+      "value": "label=Возр."
+    }, {
+      "id": "9213745b-896c-46f0-a0a5-d17c3d6b8a2b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sw70:nth-child(2) option:nth-child(2)",
+      "targets": [
+        ["css=.sw70:nth-child(2) option:nth-child(2)", "css:finder"],
+        ["xpath=(//option[@value='1'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/form/div/table/tbody/tr[4]/td[5]/span[2]/select/option[2]", "xpath:idRelative"],
+        ["xpath=//span[2]/select/option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Возр.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "eb0e2767-9713-4ec9-8daa-8a4b1d92ea9b",
+    "name": "UC-02",
+    "commands": [{
+      "id": "61dcc934-387a-452f-947c-88f86d6a8498",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b555cd5-18d9-408e-991a-ffcb2517ba0a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29d0369d-c911-422e-95a8-a35407604119",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Драники / 2025 / РУ / WEB-DL (1080p)",
+      "targets": [
+        ["linkText=Драники / 2025 / РУ / WEB-DL (1080p)", "linkText"],
+        ["css=.tp1_title:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Драники / 2025 / РУ / WEB-DL (1080p)')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/details.php?id=2135268')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Драники / 2025 / РУ / WEB-DL (1080p)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d67ebfda-2807-42bc-ba6c-0edf1df28876",
+    "name": "UC-03",
+    "commands": [{
+      "id": "2e4e55e1-9738-4274-b090-fd306fecafcf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eab2f6b2-5572-49b5-9334-227a97fbf98f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce77e2d3-aba9-40f8-a003-a57499f430f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Гость! ( Зарегистрируйтесь )",
+      "targets": [
+        ["linkText=Гость! ( Зарегистрируйтесь )", "linkText"],
+        ["css=form .tp2 > .sbab", "css:finder"],
+        ["xpath=//a[contains(text(),'Гость! ( Зарегистрируйтесь )')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div/form/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/signup.php')])[2]", "xpath:href"],
+        ["xpath=//form/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Гость! ( Зарегистрируйтесь )')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2bf8ec0-76ee-41d2-a493-fd62e59f0910",
+      "comment": "",
+      "command": "click",
+      "target": "id=wusername",
+      "targets": [
+        ["id=wusername", "id"],
+        ["name=wusername", "name"],
+        ["css=#wusername", "css:finder"],
+        ["xpath=//input[@id='wusername']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "643baec7-c79d-44ed-9020-2f9ccbc20b58",
+      "comment": "",
+      "command": "type",
+      "target": "id=wusername",
+      "targets": [
+        ["id=wusername", "id"],
+        ["name=wusername", "name"],
+        ["css=#wusername", "css:finder"],
+        ["xpath=//input[@id='wusername']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//td[2]/input", "xpath:position"]
+      ],
+      "value": "bebra666"
+    }, {
+      "id": "ed2d2edb-2466-49b8-8db4-ec7d8e062b0e",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "vlad.nesterov.2005@mail.ru"
+    }, {
+      "id": "e6292431-e008-4076-b4b2-231230d79973",
+      "comment": "",
+      "command": "type",
+      "target": "name=wpassword3",
+      "targets": [
+        ["name=wpassword3", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='wpassword3']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "c9c50dce-62b9-4688-86a8-e0322346028d",
+      "comment": "",
+      "command": "type",
+      "target": "name=passagain",
+      "targets": [
+        ["name=passagain", "name"],
+        ["css=tr:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='passagain']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[6]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "61637642-9ae0-44a1-975b-7b62867d81be",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(7) > .right",
+      "targets": [
+        ["css=tr:nth-child(7) > .right", "css:finder"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[7]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f73f6a22-f480-4a37-8f4f-91f8d79fe998",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(7) > .right",
+      "targets": [
+        ["css=tr:nth-child(7) > .right", "css:finder"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[7]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18dbbcb7-30e1-4d51-9c74-e184a5780908",
+      "comment": "",
+      "command": "click",
+      "target": "id=country",
+      "targets": [
+        ["id=country", "id"],
+        ["name=country", "name"],
+        ["css=#country", "css:finder"],
+        ["xpath=//select[@id='country']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[7]/td[2]/span/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2da7adc-cfd1-4f1e-ae6e-26850377db7f",
+      "comment": "",
+      "command": "select",
+      "target": "id=country",
+      "targets": [],
+      "value": "label=Египет"
+    }, {
+      "id": "d11bb87f-6e64-40d2-af33-652a81793ebe",
+      "comment": "",
+      "command": "click",
+      "target": "css=#country > option:nth-child(10)",
+      "targets": [
+        ["css=#country > option:nth-child(10)", "css:finder"],
+        ["xpath=//option[@value='28']", "xpath:attributes"],
+        ["xpath=//select[@id='country']/option[10]", "xpath:idRelative"],
+        ["xpath=//option[10]", "xpath:position"],
+        ["xpath=//option[contains(.,'Египет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01e40cc8-cc37-4399-8eeb-1badc1ae9526",
+      "comment": "",
+      "command": "click",
+      "target": "name=bday_day",
+      "targets": [
+        ["name=bday_day", "name"],
+        ["css=.styled:nth-child(2)", "css:finder"],
+        ["xpath=//select[@name='bday_day']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[8]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//td[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a57f5b34-b54f-44cb-8783-9baea6bbb0c3",
+      "comment": "",
+      "command": "select",
+      "target": "name=bday_day",
+      "targets": [],
+      "value": "label=12"
+    }, {
+      "id": "d75e7c42-f3c2-4ba8-8ec4-6857297db002",
+      "comment": "",
+      "command": "click",
+      "target": "css=.styled:nth-child(2) > option:nth-child(13)",
+      "targets": [
+        ["css=.styled:nth-child(2) > option:nth-child(13)", "css:finder"],
+        ["xpath=(//option[@value='12'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[8]/td[2]/select/option[13]", "xpath:idRelative"],
+        ["xpath=//td[2]/select/option[13]", "xpath:position"],
+        ["xpath=//option[contains(.,'12')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86d3391e-609a-4bd9-9038-03b53f2f0fb5",
+      "comment": "",
+      "command": "click",
+      "target": "name=bday_month",
+      "targets": [
+        ["name=bday_month", "name"],
+        ["css=.styled:nth-child(3)", "css:finder"],
+        ["xpath=//select[@name='bday_month']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[8]/td[2]/select[2]", "xpath:idRelative"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf74d225-e1ef-44f6-9504-c502403a35dc",
+      "comment": "",
+      "command": "select",
+      "target": "name=bday_month",
+      "targets": [],
+      "value": "label=июля"
+    }, {
+      "id": "0af87937-7099-4690-ae4f-31e924c04261",
+      "comment": "",
+      "command": "click",
+      "target": "css=.styled:nth-child(3) > option:nth-child(8)",
+      "targets": [
+        ["css=.styled:nth-child(3) > option:nth-child(8)", "css:finder"],
+        ["xpath=(//option[@value='07'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[8]/td[2]/select[2]/option[8]", "xpath:idRelative"],
+        ["xpath=//select[2]/option[8]", "xpath:position"],
+        ["xpath=//option[contains(.,'июля')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd0c2b09-035a-4bcd-aef8-c73b6e958b8e",
+      "comment": "",
+      "command": "click",
+      "target": "name=bday_year",
+      "targets": [
+        ["name=bday_year", "name"],
+        ["css=.styled:nth-child(5)", "css:finder"],
+        ["xpath=//select[@name='bday_year']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[8]/td[2]/select[3]", "xpath:idRelative"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "492ed2df-855a-458b-902f-72f948a53bbb",
+      "comment": "",
+      "command": "select",
+      "target": "name=bday_year",
+      "targets": [],
+      "value": "label=1974"
+    }, {
+      "id": "bb6c9070-04ba-4715-95e5-58881086517f",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(46)",
+      "targets": [
+        ["css=option:nth-child(46)", "css:finder"],
+        ["xpath=//option[@value='1974']", "xpath:attributes"],
+        ["xpath=//form[@id='upt']/div/div/table/tbody/tr[8]/td[2]/select[3]/option[46]", "xpath:idRelative"],
+        ["xpath=//option[46]", "xpath:position"],
+        ["xpath=//option[contains(.,'1974')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "dd6714d2-bc67-4ef3-a810-b89e8cb8dc0f",
+    "name": "UC-04",
+    "commands": [{
+      "id": "4ea6fefb-b15d-4f5f-8bb3-6a35760c7f73",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd64fdc5-d0a0-4521-85bf-055d7e745c4f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "148e68c5-539b-4ea1-831d-46f3b01ba059",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Кинозал.ТВ в Telegram, присоединяйся",
+      "targets": [
+        ["linkText=Кинозал.ТВ в Telegram, присоединяйся", "linkText"],
+        ["css=li:nth-child(2) > .sbab:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Кинозал.ТВ в Telegram, присоединяйся')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://t.me/kinozaltv_official')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Кинозал.ТВ в Telegram, присоединяйся')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49e1a27c-467a-4e07-b952-cfa891b0ff3c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Кинозал.ТВ в Telegram, присоединяйся",
+      "targets": [
+        ["linkText=Кинозал.ТВ в Telegram, присоединяйся", "linkText"],
+        ["css=li:nth-child(2) > .sbab:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Кинозал.ТВ в Telegram, присоединяйся')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://t.me/kinozaltv_official')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Кинозал.ТВ в Telegram, присоединяйся')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "32f4ccd9-aca7-48ac-aab9-82f5f7323054",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.right:nth-child(2) > .w90", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/form/ul/li[2]/input", "xpath:idRelative"],
+        ["xpath=//li[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84ada9d0-4e67-4818-bd2f-303000c1cc65",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.right:nth-child(2) > .w90", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/form/ul/li[2]/input", "xpath:idRelative"],
+        ["xpath=//li[2]/input", "xpath:position"]
+      ],
+      "value": "bebra123"
+    }, {
+      "id": "81719140-cd18-4395-bd6f-88f48982f052",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.right:nth-child(3) > .w90", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/form/ul/li[3]/input", "xpath:idRelative"],
+        ["xpath=//li[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b80b7676-a86f-46ea-b8f8-ddc40a334067",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.right:nth-child(3) > .w90", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/form/ul/li[3]/input", "xpath:idRelative"],
+        ["xpath=//li[3]/input", "xpath:position"]
+      ],
+      "value": "qwerty"
+    }, {
+      "id": "ccf8c3a4-c9e6-4651-8713-8168e4f0612b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buttonS",
+      "targets": [
+        ["css=.buttonS", "css:finder"],
+        ["xpath=//input[@value='Вход']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/form/ul/li[4]/input[2]", "xpath:idRelative"],
+        ["xpath=//li[4]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a1f4438d-10b8-4abd-8d90-32c4d54a28e6",
+    "name": "UC-06",
+    "commands": [{
+      "id": "148e4c2a-fbbf-4836-a0f3-a60a3c96a652",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef5996df-ae68-4f83-8e92-e82c1e858ed9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61fd83df-7419-4624-b7c7-8efe88d6ba9e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)",
+      "targets": [
+        ["linkText=Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)", "linkText"],
+        ["css=.tp1_title:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/details.php?id=2135321')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "daf45a5d-f440-4ec0-b087-1d014404ae95",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "273ef43a-4bf9-4310-8fb2-e3114d5acd74",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Добавить в закладки",
+      "targets": [
+        ["linkText=Добавить в закладки", "linkText"],
+        ["css=.w200 > li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Добавить в закладки')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"return mess_out('Добавить раздачу в закладки ?')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/bookmarks.php?torrent=2135321&hash4u=f17f5018d3a3d7fe511a8786b8307c36')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div[2]/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Добавить в закладки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b36c77f5-dcb9-4e94-ae33-46db653c41c4",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Добавить раздачу в закладки ?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5eec3a7-0452-4057-b0f3-c27731d152c2",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b41d63b6-32d1-48ad-b786-caf59b0996d2",
+    "name": "UC-05",
+    "commands": [{
+      "id": "e9a7b015-258c-4473-a6c0-0d8ada58966e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a1d42ff-b949-45be-9f6a-f74a6f7bf65d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88bda907-609b-4d14-a88f-37c2e3fc0d6c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)",
+      "targets": [
+        ["linkText=Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)", "linkText"],
+        ["css=.tp1_title:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/details.php?id=2135321')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "32f7aaad-eb24-490e-b0da-14cf416a92da",
+      "comment": "",
+      "command": "click",
+      "target": "css=a > .w200",
+      "targets": [
+        ["css=a > .w200", "css:finder"],
+        ["xpath=//div[@id='main']/div[2]/div/div[3]/table/tbody/tr/td/a/img", "xpath:idRelative"],
+        ["xpath=//td/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "90fdc30a-36c3-434b-a3b4-29838ee6946d",
+    "name": "UC-07",
+    "commands": [{
+      "id": "7d658b5d-5c13-4a19-897a-e6103b76bc9b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edba851b-46d6-44aa-ab55-a8391946dd5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d291a42e-5451-4194-8cd2-19d4e20b8bf9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)",
+      "targets": [
+        ["linkText=Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)", "linkText"],
+        ["css=.tp1_title:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/details.php?id=2135321')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ограбление в Лос-Анджелесе / Crime 101 / 2026 / ДБ, СТ / HEVC / WEB-DL (1080p)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb29eed5-7ee3-4498-941c-c342ce3e11f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=text",
+      "targets": [
+        ["id=text", "id"],
+        ["name=text", "name"],
+        ["css=#text", "css:finder"],
+        ["xpath=//textarea[@id='text']", "xpath:attributes"],
+        ["xpath=//div[@id='cmtcomm']/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5809d7b0-3294-46c3-8a93-359da138c6e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=text",
+      "targets": [
+        ["id=text", "id"],
+        ["name=text", "name"],
+        ["css=#text", "css:finder"],
+        ["xpath=//textarea[@id='text']", "xpath:attributes"],
+        ["xpath=//div[@id='cmtcomm']/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Один из лучших фильмов, что я смотрела!!"
+    }, {
+      "id": "5521124c-e6c6-4bb1-85d6-a1728401c5eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.buts",
+      "targets": [
+        ["css=.buts", "css:finder"],
+        ["xpath=//input[@value='Добавить Комментарий']", "xpath:attributes"],
+        ["xpath=//div[@id='cmtcomm']/input", "xpath:idRelative"],
+        ["xpath=//div[6]/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "59bf6eb1-1f92-4822-9c8d-e0dab3e81bc0",
+    "name": "UC-08",
+    "commands": [{
+      "id": "27c9ec9f-aab2-4b05-b7c8-de82e8dac112",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86ddbb7a-0142-4d56-886b-37137c0e37f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8cf7d174-f1ef-41c8-9da4-73b06747ee77",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Жизнь и смерть Фердинанда Люса (Бомба для председателя) (4 серии из 4) / 1976 / РУ / SATRip",
+      "targets": [
+        ["linkText=Жизнь и смерть Фердинанда Люса (Бомба для председателя) (4 серии из 4) / 1976 / РУ / SATRip", "linkText"],
+        ["css=.tp1_title:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Жизнь и смерть Фердинанда Люса (Бомба для председателя) (4 серии из 4) / 1976 / РУ / SATRip')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div[2]/div[2]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/details.php?id=664779')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Жизнь и смерть Фердинанда Люса (Бомба для председателя) (4 серии из 4) / 1976 / РУ / SATRip')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dec1eba4-024c-47f6-a10f-54ad8e14c90d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.s10",
+      "targets": [
+        ["css=.s10", "css:finder"],
+        ["xpath=//a[@onclick='vote(664779,10); return false;']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/ul/li[19]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[5]", "xpath:href"],
+        ["xpath=//li[19]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6a35b5b8-5688-48c4-a134-f5ab4bf03760",
+    "name": "UC-09",
+    "commands": [{
+      "id": "f466dfae-fd18-4be1-bf58-ebe22b0ff232",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd15f0dd-ef0a-4cf4-8b8c-a84051ec1241",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adad5dcb-bff6-4f31-bd71-9810b918b049",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Конфигурация",
+      "targets": [
+        ["linkText=Конфигурация", "linkText"],
+        ["css=.bx2_0:nth-child(1) li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Конфигурация')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/my.php')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Конфигурация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a5e02fa-71c1-449d-9acb-a2397e439b5c",
+      "comment": "",
+      "command": "click",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.tables4:nth-child(3) tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[5]/div/table/tbody/tr/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48b64190-2f44-4b81-a290-0479dcf01547",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.tables4:nth-child(3) tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[5]/div/table/tbody/tr/td[2]/input", "xpath:position"]
+      ],
+      "value": "qwerty"
+    }, {
+      "id": "bfa0dbda-53a4-47c4-ba5b-ddec7255df46",
+      "comment": "",
+      "command": "click",
+      "target": "name=chpass",
+      "targets": [
+        ["name=chpass", "name"],
+        ["css=form:nth-child(10) tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='chpass']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[5]/div/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66748c18-422a-4028-a5bc-ccc8326d3417",
+      "comment": "",
+      "command": "type",
+      "target": "name=chpass",
+      "targets": [
+        ["name=chpass", "name"],
+        ["css=form:nth-child(10) tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='chpass']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//form[5]/div/table/tbody/tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "qwerty1"
+    }, {
+      "id": "08c4c120-c264-4f71-9cfe-494a755dc15a",
+      "comment": "",
+      "command": "click",
+      "target": "name=passagain",
+      "targets": [
+        ["name=passagain", "name"],
+        ["css=form:nth-child(10) tr:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='passagain']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70a06589-245c-4483-8b32-e6b268b08bca",
+      "comment": "",
+      "command": "type",
+      "target": "name=passagain",
+      "targets": [
+        ["name=passagain", "name"],
+        ["css=form:nth-child(10) tr:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='passagain']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "qwerty1"
+    }, {
+      "id": "74bdaa4f-f8d8-4d2b-b6fe-0bfb7015a1b4",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(10) .buttonS",
+      "targets": [
+        ["css=form:nth-child(10) .buttonS", "css:finder"],
+        ["xpath=//input[@value='Сменить пароль']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div[2]/div/div[2]/form[5]/div/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ee630191-4f60-47fb-8a73-a4c8666a7a61",
+    "name": "UC-10",
+    "commands": [{
+      "id": "0857450a-2782-4252-b839-56f56ed309f2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e1eca6b6-35b8-496d-8720-bfbeff0ee316",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "964x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9f8dc6d-a9a9-4793-b2e2-4d73727fd6d7",
+      "comment": "",
+      "command": "chooseOkOnNextConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ec5b2bf-bcb9-4d1b-8214-e90cd689a18f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Выход",
+      "targets": [
+        ["linkText=Выход", "linkText"],
+        ["css=.b > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Выход')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"return mess_out('Вы действительно хотите выйти?')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/div/ul/li/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout.php?hash4u=f17f5018d3a3d7fe511a8786b8307c36')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Выход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc19a954-28fa-49a3-8802-ae84803e9a04",
+      "comment": "",
+      "command": "assertConfirmation",
+      "target": "Вы действительно хотите выйти?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1bfb109c-2a3e-4f83-8add-9d441f7161bf",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e59e76fa-a653-4c96-b2e8-7c4561ee26e1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d8fc4f04-59cd-449d-8be4-e2421e5e8d56"]
+  }],
+  "urls": ["https://kinozal.tv/"],
+  "plugins": []
+}
