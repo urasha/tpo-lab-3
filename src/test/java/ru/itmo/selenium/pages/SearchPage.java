@@ -13,7 +13,7 @@ public class SearchPage extends BasePage {
     private static final By YEAR_SELECT = By.xpath("//select[@name='d']");
     private static final By FORMAT_SELECT = By.xpath("//select[@name='f']");
     private static final By FILTER_SUBMIT_BTN = By.xpath("//select[@name='f']/ancestor::form//input[@type='submit' or @type='button']");
-    private static final By EMPTY_SEARCH_MSG = By.xpath("//*[contains(text(), 'РќРµС‚ Р°РєС‚РёРІРЅС‹С… СЂР°Р·РґР°С‡, РїСЂРёРЅРѕСЃРёРј РёР·РІРёРЅРµРЅРёСЏ')]");
+    private static final By EMPTY_SEARCH_MSG = By.xpath("//*[contains(text(), 'Нет активных раздач, приносим извинения')]");
 
     public SearchPage(WebDriver driver) {
         super(driver);

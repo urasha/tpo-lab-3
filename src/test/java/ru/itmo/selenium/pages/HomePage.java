@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
     
     private static final By LOGIN_INPUT = By.xpath("//div[@id='main']//form//input[@name='username']");
     private static final By PASS_INPUT = By.xpath("//div[@id='main']//form//input[@name='password']");
-    private static final By LOGIN_BTN = By.xpath("//input[@value='Р’С…РѕРґ']");
+    private static final By LOGIN_BTN = By.xpath("//input[@value='Вход']");
     private static final By LOGOUT_LINK = By.xpath("//a[contains(@href, '/logout.php')]");
     private static final By REGISTER_LINK = By.xpath("//a[contains(@href, '/signup.php')]");
 

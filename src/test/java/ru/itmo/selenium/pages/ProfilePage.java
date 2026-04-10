@@ -11,8 +11,8 @@ public class ProfilePage extends BasePage {
     private static final By OLD_PASS = By.xpath("//input[@name='pass']");
     private static final By NEW_PASS = By.xpath("//input[@name='chpass']");
     private static final By CONFIRM_PASS = By.xpath("//input[@name='passagain']");
-    private static final By CHANGE_PASS_BTN = By.xpath("//input[@value='РЎРјРµРЅРёС‚СЊ РїР°СЂРѕР»СЊ'] | //input[@type='submit' and contains(@value, 'РїР°СЂРѕР»СЊ')]");
-    private static final By SUCCESS_MSG = By.xpath("//*[contains(text(), 'Р’Р°С€ РїР°СЂРѕР»СЊ Р±С‹Р» РёР·РјРµРЅРµРЅ')] | //div[@class='bx1 justify']");
+    private static final By CHANGE_PASS_BTN = By.xpath("//input[@value='Сменить пароль'] | //input[@type='submit' and contains(@value, 'пароль')]");
+    private static final By SUCCESS_MSG = By.xpath("//*[contains(text(), 'Ваш пароль был изменен')] | //div[@class='bx1 justify']");
 
     public ProfilePage(WebDriver driver) {
         super(driver);

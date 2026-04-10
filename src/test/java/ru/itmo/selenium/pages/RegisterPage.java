@@ -15,8 +15,8 @@ public class RegisterPage extends BasePage {
     private static final By BDAY_DAY = By.xpath("//select[@name='bday_day']");
     private static final By BDAY_MONTH = By.xpath("//select[@name='bday_month']");
     private static final By BDAY_YEAR = By.xpath("//select[@name='bday_year']");
-    private static final By SUBMIT_BTN = By.xpath("//input[@type='submit' and (contains(@value, 'РџСЂРѕРґРѕР»Р¶РёС‚СЊ') or contains(@value, 'Р—Р°РІРµСЂС€РёС‚СЊ'))] | //form[@id='upt']//input[@type='submit']");
-    private static final By SUCCESS_MSG = By.xpath("//*[contains(text(), 'РѕСЃС‚Р°Р»РѕСЃСЊ СЃРѕРІСЃРµРј РЅРµРјРЅРѕРіРѕ')] | //input[@name='answer'] | //img[@src='pic.php']");
+    private static final By SUBMIT_BTN = By.xpath("//input[@type='submit' and (contains(@value, 'Продолжить') or contains(@value, 'Завершить'))] | //form[@id='upt']//input[@type='submit']");
+    private static final By SUCCESS_MSG = By.xpath("//*[contains(text(), 'осталось совсем немного')] | //input[@name='answer'] | //img[@src='pic.php']");
 
     public RegisterPage(WebDriver driver) {
         super(driver);
