@@ -13,8 +13,8 @@ import java.time.Duration;
 
 public abstract class BaseTest {
     protected WebDriver driver;
-    protected static final String VALID_USERNAME = "bebra123";
-    protected static final String VALID_PASSWORD = "qwerty1";
+    protected static final String VALID_USERNAME = "bakuani";
+    protected static final String VALID_PASSWORD = "anna2005";
 
     @BeforeEach
     public void setUp() {

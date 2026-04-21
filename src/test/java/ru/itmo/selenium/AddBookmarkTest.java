@@ -14,8 +14,9 @@ public class AddBookmarkTest extends BaseTest {
         assertTrue(homePage.isUserLoggedIn(), "Пользователь вошел в систему");
         
         DetailsPage detailsPage = homePage.clickFirstSearchResult();
+        String movieTitle = detailsPage.getTitle();
         detailsPage.addBookmark();
         
-        assertTrue(detailsPage.isBookmarkAdded(), "Фильм должен быть добавлен в закладки");
+        assertTrue(detailsPage.isBookmarkAdded(movieTitle), "Фильм должен быть добавлен в закладки");
     }
 }

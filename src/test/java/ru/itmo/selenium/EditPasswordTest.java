@@ -20,6 +20,13 @@ public class EditPasswordTest extends BaseTest {
             profilePage.changePassword(VALID_PASSWORD, newPassword);
             assertTrue(profilePage.isPasswordChangeSuccessful(), "Пароль должен быть успешно изменен");
         } finally {
+            // После смены пароля сессия может сброситься (или нужно заново авторизоваться)
+            homePage.open();
+            if (!homePage.isUserLoggedIn()) {
+                homePage.login(VALID_USERNAME, newPassword);
+            }
+            // Возвращаемся обратно на страницу профиля/настроек, чтобы вернуть старый пароль
+            profilePage.open();
             profilePage.changePassword(newPassword, VALID_PASSWORD);
         }
     }

@@ -10,7 +10,7 @@ public class HomePage extends BasePage {
     
     private static final By SEARCH_INPUT = By.xpath("//input[@name='s']");
     private static final By SEARCH_BUTTON = By.xpath("//form[contains(@action, 'browse.php')]//input[@type='submit' or contains(@class, 'submit')]");
-    private static final By FIRST_MOVIE_LINK = By.xpath("(//a[contains(@href, '/details.php?id=')])[1]");
+    private static final By FIRST_MOVIE_LINK = By.xpath("(//div[contains(@class, 'tp1_title')]/a[contains(@href, '/details.php?id=')] | //td[contains(@class, 'nam')]/a[contains(@href, '/details.php?id=')])[1]");
     
     private static final By LOGIN_INPUT = By.xpath("//div[@id='main']//form//input[@name='username']");
     private static final By PASS_INPUT = By.xpath("//div[@id='main']//form//input[@name='password']");
@@ -35,7 +35,7 @@ public class HomePage extends BasePage {
     }
 
     public boolean isUserLoggedIn() {
-        return driver.findElement(LOGOUT_LINK).isDisplayed();
+        return !driver.findElements(LOGOUT_LINK).isEmpty() && driver.findElement(LOGOUT_LINK).isDisplayed();
     }
 
     public HomePage logout() {
@@ -45,7 +45,8 @@ public class HomePage extends BasePage {
     }
 
     public DetailsPage clickFirstSearchResult() {
-        driver.findElement(FIRST_MOVIE_LINK).click();
+        String url = driver.findElement(FIRST_MOVIE_LINK).getAttribute("href");
+        driver.get(url);
         return new DetailsPage(driver);
     }
 
@@ -67,8 +68,13 @@ public class HomePage extends BasePage {
         return new SearchPage(driver);
     }
 
+    public String getFirstMovieFullText() {
+        return driver.findElement(FIRST_MOVIE_LINK).getText();
+    }
+
     public DetailsPage openFirstMovie() {
-        driver.findElement(FIRST_MOVIE_LINK).click();
+        String url = driver.findElement(FIRST_MOVIE_LINK).getAttribute("href");
+        driver.get(url);
         return new DetailsPage(driver);
     }
 }

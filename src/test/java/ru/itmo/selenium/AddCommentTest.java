@@ -15,8 +15,10 @@ public class AddCommentTest extends BaseTest {
         
         DetailsPage detailsPage = homePage.clickFirstSearchResult();
         String commentText = "Test comment " + System.currentTimeMillis();
+        
         detailsPage.addComment(commentText);
         
-        assertTrue(detailsPage.isCommentDisplayed(commentText), "Комментарий должен отображаться");
+        // Ожидаемый результат: отображение ошибки о запрете, так как аккаунт новичок
+        assertTrue(detailsPage.isCommentErrorDisplayed(), "Должна появиться ошибка о том, что новичкам запрещено оставлять комментарии первые 3 дня");
     }
 }

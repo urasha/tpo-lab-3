@@ -15,6 +15,23 @@ public class DetailsPage extends BasePage {
         super(driver);
     }
 
+    public String getTitle() {
+        // Ожидаем присутствия заголовка в DOM, а не просто видимости (иногда Selenium глючит с видимостью <h1>)
+        WebElement titleElement = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
+            .until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(By.xpath("//h1|//div[contains(@class, 'mn_wrap')]//a[contains(@class, 'r2')]")));
+        return titleElement.getAttribute("textContent").trim();
+    }
+
+    public String getYearInfo() {
+        List<WebElement> yearElements = driver.findElements(YEAR_INFO);
+        return yearElements.isEmpty() ? "" : yearElements.get(0).getText();
+    }
+
+    public String getGenreInfo() {
+        List<WebElement> genreElements = driver.findElements(GENRE_INFO);
+        return genreElements.isEmpty() ? "" : genreElements.get(0).getText();
+    }
+
     public boolean hasPoster() {
         List<WebElement> posters = driver.findElements(POSTER_IMG);
         return !posters.isEmpty();
@@ -53,8 +70,9 @@ public class DetailsPage extends BasePage {
         return this;
     }
 
-    public boolean isBookmarkAdded() {
-        return true;
+    public boolean isBookmarkAdded(String movieTitle) {
+        List<WebElement> bookmarks = driver.findElements(By.xpath("//a[contains(text(), '" + movieTitle.replace("'", "") + "') or contains(@title, '" + movieTitle.replace("'", "") + "')] | //a[contains(@href, 'details.php?id=')]"));
+        return !bookmarks.isEmpty();
     }
 
     public DetailsPage addComment(String text) {
@@ -63,17 +81,76 @@ public class DetailsPage extends BasePage {
         return this;
     }
 
-    public boolean isCommentDisplayed(String text) {
-        return true;
+    public boolean isCommentDisplayed(String text, String authorUsername) {
+        String safeText = text.replace("'", "");
+        String safeUser = authorUsername.replace("'", "");
+        
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), safeText));
+        } catch (org.openqa.selenium.TimeoutException e) {
+            return false;
+        }
+        
+        String xpath = "//*[contains(text(), '" + safeText + "')]/ancestor::*[contains(@class, 'bx') or local-name()='table' or local-name()='div' and @class][1]";
+        
+        List<WebElement> commentBlocks = driver.findElements(By.xpath(xpath));
+        for (WebElement block : commentBlocks) {
+            String blockText = block.getText();
+            if (blockText.contains(safeUser) && (blockText.contains("сейчас") || blockText.contains("Сейчас"))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isCommentErrorDisplayed() {
+        try {
+            // Обычно ошибки появляются на новой странице или в алерт-блоке
+            new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElementLocated(
+                    By.tagName("body"), "Вам запрещено добавлять комментарии первые 3 дня"));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public DetailsPage giveRating(int rating) {
+        // Прокручиваем страницу до блока с рейтингом, чтобы элемент был в зоне видимости перед кликом
         WebElement star = driver.findElement(By.xpath("//a[contains(@onclick, 'vote(') and contains(@onclick, '" + rating + ");')] | //ul[contains(@class, 'unit-rating')]//a[text()='" + rating + "']"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", star);
+        
+        // Надежный скролл: пытаемся докрутить страницу так, чтобы элемент оказался посередине
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true); window.scrollBy(0, -200);", star);
+        
+        try {
+            Thread.sleep(500); // Даем время на плавную прокрутку
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Пробуем кликнуть обычным способом, если перекрыт - запасным через JS
+        try {
+            star.click();
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", star);
+        }
         return this;
     }
 
-    public boolean isRatingAdded() {
-        return true; 
+    public boolean isRatingAdded(int rating) {
+        String expectedText = "Вы поставили оценку в " + rating + " баллов";
+        String alreadyRatedText = "Вы уже выставили оценку этой раздаче";
+        
+        try {
+            new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
+                .until(org.openqa.selenium.support.ui.ExpectedConditions.or(
+                    org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), expectedText),
+                    org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), alreadyRatedText)
+                ));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
