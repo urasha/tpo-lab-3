@@ -16,7 +16,6 @@ public class DetailsPage extends BasePage {
     }
 
     public String getTitle() {
-        // Ожидаем присутствия заголовка в DOM, а не просто видимости (иногда Selenium глючит с видимостью <h1>)
         WebElement titleElement = new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(10))
             .until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(By.xpath("//h1|//div[contains(@class, 'mn_wrap')]//a[contains(@class, 'r2')]")));
         return titleElement.getAttribute("textContent").trim();
@@ -50,6 +49,16 @@ public class DetailsPage extends BasePage {
     public boolean hasDescriptionHeader() {
         List<WebElement> descHeaders = driver.findElements(DESC_HEADER);
         return !descHeaders.isEmpty();
+    }
+
+    public String getDescriptionTitle() {
+        String text = getTextByXPathTextNode("//h2[contains(text(), 'Название:') and contains(text(), 'Год выпуска:')]/text()[1]");
+        return text != null ? text.replace("Название:", "").trim() : "";
+    }
+
+    public String getDescriptionYear() {
+        String text = getTextByXPathTextNode("//h2[contains(text(), 'Название:') and contains(text(), 'Год выпуска:')]/text()[3]");
+        return text != null ? text.replace("Год выпуска:", "").trim() : "";
     }
 
     public DetailsPage clickDownloadTorrent() {

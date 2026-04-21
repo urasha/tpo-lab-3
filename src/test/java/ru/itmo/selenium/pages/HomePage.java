@@ -77,4 +77,14 @@ public class HomePage extends BasePage {
         driver.get(url);
         return new DetailsPage(driver);
     }
+
+    public String getFirstMovieTitleFromDesc() {
+        String text = getTextByXPathTextNode("(//div[contains(., 'Название:') and contains(., 'Год выпуска:')])[1]/text()[1]");
+        return text != null ? text.replace("Название:", "").trim() : "";
+    }
+
+    public String getFirstMovieYearFromDesc() {
+        String text = getTextByXPathTextNode("(//div[contains(., 'Название:') and contains(., 'Год выпуска:')])[1]/text()[3]");
+        return text != null ? text.replace("Год выпуска:", "").trim() : "";
+    }
 }
