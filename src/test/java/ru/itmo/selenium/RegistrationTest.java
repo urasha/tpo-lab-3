@@ -8,6 +8,8 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RegistrationTest extends BaseTest {
+
+    // TODO: заменить на тест: ТОП раздач отсортирован по убыванию рейтинга
     @Test
     public void testRegistration() throws InterruptedException {
         HomePage homePage = new HomePage(driver).open();

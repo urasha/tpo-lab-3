@@ -7,6 +7,8 @@ import ru.itmo.selenium.pages.HomePage;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DownloadTorrentTest extends BaseTest {
+
+    // TODO: поменять на UC с форумом
     @Test
     public void testDownloadTorrent() {
         HomePage homePage = new HomePage(driver).open();

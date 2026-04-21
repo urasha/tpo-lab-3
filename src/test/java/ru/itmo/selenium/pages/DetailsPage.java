@@ -1,8 +1,6 @@
 package ru.itmo.selenium.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
 import java.util.List;
 
@@ -50,7 +48,7 @@ public class DetailsPage extends BasePage {
         driver.findElement(By.xpath("//a[contains(@onclick, 'mess_out') and contains(text(), 'Добавить в закладки')] | //a[contains(@href, '/takemarks.php')]")).click();
         try {
             driver.switchTo().alert().accept();
-        } catch (org.openqa.selenium.NoAlertPresentException e) {
+        } catch (NoAlertPresentException e) {
         }
         return this;
     }
@@ -71,7 +69,7 @@ public class DetailsPage extends BasePage {
 
     public DetailsPage giveRating(int rating) {
         WebElement star = driver.findElement(By.xpath("//a[contains(@onclick, 'vote(') and contains(@onclick, '" + rating + ");')] | //ul[contains(@class, 'unit-rating')]//a[text()='" + rating + "']"));
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].click();", star);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", star);
         return this;
     }
 

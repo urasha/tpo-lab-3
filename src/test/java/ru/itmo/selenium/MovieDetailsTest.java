@@ -13,7 +13,8 @@ public class MovieDetailsTest extends BaseTest {
         homePage.open();
         
         DetailsPage detailsPage = homePage.openFirstMovie();
-        
+
+        // TODO: проверять конкретные данные (название, год, жанр) после получения доступа к тестовой раздаче
         Assertions.assertTrue(detailsPage.hasPoster(), "Детали раздачи не открылись (постер не найден)");
         Assertions.assertTrue(detailsPage.hasYearInfo(), "Не найдена информация о годе выпуска");
         Assertions.assertTrue(detailsPage.hasGenreInfo(), "Не найдена информация о жанре");
