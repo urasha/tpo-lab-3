@@ -23,7 +23,7 @@ public class ProfilePage extends BasePage {
         return this;
     }
 
-    public ProfilePage changePassword(String currentPassword, String newPassword) {
+    public ProfilePage changePassword(String currentPassword, String newPassword, String confirmPassword) {
         WebElement oldPassInput = driver.findElement(OLD_PASS);
         oldPassInput.clear();
         oldPassInput.sendKeys(currentPassword);
@@ -34,7 +34,7 @@ public class ProfilePage extends BasePage {
 
         WebElement confirmPassInput = driver.findElement(CONFIRM_PASS);
         confirmPassInput.clear();
-        confirmPassInput.sendKeys(newPassword);
+        confirmPassInput.sendKeys(confirmPassword);
 
         driver.findElement(CHANGE_PASS_BTN).click();
         return this;
@@ -44,3 +44,4 @@ public class ProfilePage extends BasePage {
         return !driver.findElements(SUCCESS_MSG).isEmpty();
     }
 }
+

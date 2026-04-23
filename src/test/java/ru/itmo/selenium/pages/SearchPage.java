@@ -49,3 +49,4 @@ public class SearchPage extends BasePage {
         return !emptyResultMessages.isEmpty();
     }
 }
+

@@ -2,7 +2,6 @@ package ru.itmo.selenium.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage extends BasePage {
@@ -59,3 +58,4 @@ public class RegisterPage extends BasePage {
         return !driver.findElements(SUCCESS_MSG).isEmpty();
     }
 }
+

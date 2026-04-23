@@ -15,8 +15,6 @@ public class GiveRatingTest extends BaseTest {
         
         DetailsPage detailsPage = homePage.clickFirstSearchResult();
         detailsPage.giveRating(10);
-        
-        // Проверяем, что оценка поставилась успешно, либо она уже была выставлена ранее
         assertTrue(detailsPage.isRatingAdded(10), "Сообщение об успешной оценке или о том, что оценка уже выставлена, не появилось на странице");
     }
 }

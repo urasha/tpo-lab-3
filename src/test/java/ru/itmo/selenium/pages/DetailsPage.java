@@ -70,10 +70,14 @@ public class DetailsPage extends BasePage {
         return true; 
     }
 
-    public DetailsPage addBookmark() {
+    public DetailsPage addBookmark(boolean accept) {
         driver.findElement(By.xpath("//a[contains(@onclick, 'mess_out') and contains(text(), 'Добавить в закладки')] | //a[contains(@href, '/takemarks.php')]")).click();
         try {
-            driver.switchTo().alert().accept();
+            if (accept) {
+                driver.switchTo().alert().accept();
+            } else {
+                driver.switchTo().alert().dismiss();
+            }
         } catch (NoAlertPresentException e) {
         }
         return this;
@@ -115,7 +119,6 @@ public class DetailsPage extends BasePage {
 
     public boolean isCommentErrorDisplayed() {
         try {
-            // Обычно ошибки появляются на новой странице или в алерт-блоке
             new org.openqa.selenium.support.ui.WebDriverWait(driver, java.time.Duration.ofSeconds(5))
                 .until(org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentInElementLocated(
                     By.tagName("body"), "Вам запрещено добавлять комментарии первые 3 дня"));
@@ -126,10 +129,7 @@ public class DetailsPage extends BasePage {
     }
 
     public DetailsPage giveRating(int rating) {
-        // Прокручиваем страницу до блока с рейтингом, чтобы элемент был в зоне видимости перед кликом
         WebElement star = driver.findElement(By.xpath("//a[contains(@onclick, 'vote(') and contains(@onclick, '" + rating + ");')] | //ul[contains(@class, 'unit-rating')]//a[text()='" + rating + "']"));
-        
-        // Надежный скролл: пытаемся докрутить страницу так, чтобы элемент оказался посередине
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true); window.scrollBy(0, -200);", star);
         
         try {
@@ -137,8 +137,6 @@ public class DetailsPage extends BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        // Пробуем кликнуть обычным способом, если перекрыт - запасным через JS
         try {
             star.click();
         } catch (Exception e) {
@@ -163,3 +161,4 @@ public class DetailsPage extends BasePage {
         }
     }
 }
+

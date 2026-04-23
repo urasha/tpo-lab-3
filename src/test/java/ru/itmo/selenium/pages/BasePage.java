@@ -16,3 +16,4 @@ public abstract class BasePage {
         return (String) js.executeScript(script, xpath);
     }
 }
+

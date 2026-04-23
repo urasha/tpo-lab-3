@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomePage extends BasePage {
 
     public static final String HOME_URL = "https://kinozal.tv/";
@@ -17,6 +20,7 @@ public class HomePage extends BasePage {
     private static final By LOGIN_BTN = By.xpath("//input[@value='Вход']");
     private static final By LOGOUT_LINK = By.xpath("//a[contains(@href, '/logout.php')]");
     private static final By REGISTER_LINK = By.xpath("//a[contains(@href, '/signup.php')]");
+    private static final By TOP_SEEDS_RATINGS = By.xpath("//ul[li[contains(text(), 'Топ раздач')]]//li[contains(@class, 'small')]//span[contains(@class, 'floatright')]");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -25,6 +29,18 @@ public class HomePage extends BasePage {
     public HomePage open() {
         driver.get(HOME_URL);
         return this;
+    }
+
+    public List<Integer> getTopSeedsRatings() {
+        List<WebElement> elements = driver.findElements(TOP_SEEDS_RATINGS);
+        List<Integer> ratings = new ArrayList<>();
+        for (WebElement element : elements) {
+            String text = element.getText().trim().replace(",", "");
+            try {
+                ratings.add(Integer.parseInt(text));
+            } catch (NumberFormatException ignored) {}
+        }
+        return ratings;
     }
 
     public HomePage login(String user, String pass) {
@@ -88,3 +104,4 @@ public class HomePage extends BasePage {
         return text != null ? text.replace("Год выпуска:", "").trim() : "";
     }
 }
+
