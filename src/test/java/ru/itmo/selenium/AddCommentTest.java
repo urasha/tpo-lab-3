@@ -2,6 +2,7 @@ package ru.itmo.selenium;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import ru.itmo.selenium.pages.DetailsPage;
 import ru.itmo.selenium.pages.HomePage;
@@ -31,9 +32,9 @@ public class AddCommentTest extends BaseTest {
         DetailsPage detailsPage = homePage.clickFirstSearchResult();
         detailsPage.addComment("Short");
         
-        boolean alertShown = false;
+        boolean alertShown;
         try {
-            org.openqa.selenium.Alert alert = driver.switchTo().alert();
+            Alert alert = driver.switchTo().alert();
             String alertText = alert.getText();
             alert.accept();
             alertShown = alertText.contains("Комментарий не может быть меньше 10 символов");

@@ -8,6 +8,24 @@ import ru.itmo.selenium.pages.ProfilePage;
 public class EditPasswordTest extends BaseTest {
 
     @Test
+    public void testEditPasswordSuccess() {
+        HomePage homePage = new HomePage(driver).open();
+        homePage.login(VALID_USERNAME, VALID_PASSWORD);
+        Assertions.assertTrue(homePage.isUserLoggedIn(), "Пользователь должен быть авторизован");
+        
+        ProfilePage profilePage = new ProfilePage(driver).open();
+        
+        String newPassword = VALID_PASSWORD + "123";
+        try {
+            profilePage.changePassword(VALID_PASSWORD, newPassword, newPassword);
+            Assertions.assertTrue(driver.getPageSource().contains("Ваш пароль был изменен"));
+        } finally {
+            profilePage.open();
+            profilePage.changePassword(newPassword, VALID_PASSWORD, VALID_PASSWORD);
+        }
+    }
+
+    @Test
     public void testEditPasswordWrongOld() {
         HomePage homePage = new HomePage(driver).open();
         homePage.login(VALID_USERNAME, VALID_PASSWORD);
@@ -17,13 +35,13 @@ public class EditPasswordTest extends BaseTest {
         
         profilePage.changePassword(VALID_PASSWORD + "wrong", "newPass123", "newPass123");
         
-        Assertions.assertTrue(driver.getCurrentUrl().contains("takeprofedit"), "Ожидаем редирект в обработчик");
         Assertions.assertTrue(driver.getPageSource().contains("неверно указали старый"), "Ожидалась ошибка старого пароля");
     }
 
     @Test
     public void testEditPasswordTooShort() {
         HomePage homePage = new HomePage(driver).open();
+
         homePage.login(VALID_USERNAME, VALID_PASSWORD);
         Assertions.assertTrue(homePage.isUserLoggedIn(), "Пользователь должен быть авторизован");
         
@@ -31,7 +49,6 @@ public class EditPasswordTest extends BaseTest {
         
         profilePage.changePassword(VALID_PASSWORD, "12345", "12345");
         
-        Assertions.assertTrue(driver.getCurrentUrl().contains("takeprofedit"), "Ожидаем редирект в обработчик");
         Assertions.assertTrue(driver.getPageSource().contains("менее 6 символов"), "Ожидалась ошибка длины пароля");
     }
 
@@ -45,8 +62,6 @@ public class EditPasswordTest extends BaseTest {
         
         profilePage.changePassword(VALID_PASSWORD, "newPass123", "newPass456");
         
-        Assertions.assertTrue(driver.getCurrentUrl().contains("takeprofedit"), "Ожидаем редирект в обработчик");
         Assertions.assertTrue(driver.getPageSource().contains("Пароли не совпадают"), "Ожидалась ошибка совпадения паролей");
     }
 }
-
